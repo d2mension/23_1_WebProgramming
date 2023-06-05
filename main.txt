@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="main_style.css" type="text/css" rel="stylesheet">
+<title>B O M O F</title>
+<style>
+body 	{background-color:#FFFFFF;}
+
+header	{margin:20px 0 0 0;}
+header div	{float: left; height:200px;}
+#logo 	{width:200px;}
+#title	{width:600px;}
+
+nav	{width:100%; height:35px;}
+
+#mainCanvas
+	{background-color: #FFFFFF; position:relative; top:30px;}
+
+#section-img
+	{width:835px; height:400px; position:relative;}
+#section-img:hover
+	{cursor:pointer;}
+.change
+	{width:50px; height:50px; padding-top:15px; padding-bottom:15px;}
+#img-left
+	{float:left; position:relative; top:175px; z-index:3; padding-left:15px;}
+#img-right
+	{float:right; position:relative; top:175px; z-index:3; padding-right:15px;}
+
+footer	p
+	{height:90px; position:relative; top:34px;
+	font-size:13px; color:#AAAAAA;}
+</style>
+
+<script>
+function canSet() {
+	var canvas = document.getElementById("mainCanvas");
+
+	var heit = window.innerHeight;
+	heit = heit*2;
+	canvas.style.height = heit+"px";
+
+	var canvas = document.getElementById("mainCanvas");
+	var context = canvas.getContext("2d");
+
+	var img01 = new Image();
+	var img02 = new Image();
+	var img03 = new Image();
+	var img04 = new Image();
+
+
+	img_X = canvas.width/2;
+	img04.onload = function() {
+		context.drawImage(img01, img_X-120, 150, 300, 300);
+		context.drawImage(img02, img_X-280, 450);
+
+		heit = heit/2;
+		context.drawImage(img03, img_X-320, heit+150);
+		var cHeit = canvas.height;
+		context.drawImage(img04, img_X-200, cHeit-150);
+	}
+
+	img01.src = "img/logo.png";
+	img02.src = "img/title.png";
+	img03.src = "img/mainDescribe.png";
+	img04.src = "img/mainContact.png";
+
+
+	var wid = window.innerWidth;
+	wid = (wid+835)/2;
+	var section = document.getElementById("section");
+	section.style.marginLeft = wid;
+	
+}
+</script>
+
+
+
+</head>
+<body onload="canSet()">
+<!-- <header id="header"><hgroup>
+	<div id="logo"><img src="logo.png"></div>
+	<div id="title"><img src="title.png"></div>
+</hgroup></header> -->
+
+<canvas id="mainCanvas" width="835" height="1700"></canvas>
+
+
+<nav>&nbsp</nav>
+
+
+<section>
+<div id="section">
+<div class="change" id="img-left" onclick="moveLeft()"><img src="img/leftArr.png"></div>
+<div class="change" id="img-right" onclick="moveRight()"><img src="img/rightArr.png"></div>
+<div id="section-img" style="background-image:url('img/mainIntro.png');" onclick="page1()"></div>
+</div>
+
+<script>
+var div = document.getElementById("section-img");
+var cnt = 0;
+
+function moveLeft() {
+	cnt = cnt-1;
+
+	if (cnt<0) cnt+=3;
+
+	if (cnt%3 == 1) {
+		div.style.backgroundImage = "url('img/mainCareer.png')";
+		div.onclick = function() { location.href = "career%231.html" };
+	}
+	else if (cnt%3 == 2) {
+		div.style.backgroundImage = "url('img/mainGallery.png')";
+		div.onclick = function() { location.href = "gallery.html" };
+	}
+	else {
+		div.style.backgroundImage = "url('img/mainIntro.png')";
+		div.onclick = function() { location.href = "intro%231.html" };
+	}
+	
+	
+}
+
+function moveRight() {
+	cnt = cnt+1;
+
+	if (cnt%3 == 1) {
+		div.style.backgroundImage = "url('img/mainCareer.png')";
+		div.onclick = function() { location.href = "career%231.html"; };
+	}
+	else if (cnt%3 == 2) {
+		div.style.backgroundImage = "url('img/mainGallery.png')";
+		div.onclick = function() { location.href = "gallery.html"; };
+	}
+	else {
+		div.style.backgroundImage = "url('img/mainIntro.png')";
+		div.onclick = function() { location.href = "intro%231.html"; };
+	}
+}
+
+function page1() { location.href = 'intro%231.html'; }
+</script>
+
+</section>
+
+
+<footer>
+	<p><strong>Copyright 2023, Jeong Miri All rights reserved.</strong></p>
+</footer>
+</body>
+</html>

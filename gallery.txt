@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="main_style.css" type="text/css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+<title>B O M O F / gallery</title>
+<style>
+* 	{font-family: 'Gowun Dodum', sans-serif;}
+
+header	{height: 200px; position:relative; top:20px;}
+header div	{float: left; height:200px;}
+#logo 	{width:200px;}
+
+a	{text-decoration-line:none;}
+a:link	{color:#29282E;}
+a:visited
+	{color:#29282E;}
+a:active
+	{color:#E89E56;}
+
+#menu	{width:630px; height:35px; position:relative; float:right; top:165px; background-image:url("img/menu.png"); border-radius: 0.3em;}
+#menu div
+	{float:left; width:210px; height:35px; position:relative; top:0px; font-weight:bold; box-shadow: 0 0 5px -1px #CCA45E;}
+#menu div span 
+	{position:relative; top:6px;}
+#menu div:hover
+	{box-shadow: 3px 2px 5px -1px #E0BB72;}
+
+#menu1	{border-radius: 0.3em 0 0 0.3em;}
+#menu3	{border-radius: 0 0.3em 0.3em 0;}
+
+
+#detailTitle
+	{padding-top:70px;}
+
+#content
+	{background-color:#FFFFFF; position:relative; top:35px; text-align:center;}
+
+#content li 
+	{list-style-image:url("img/marker.png"); padding-top:10px; font-size:1.2em; font-weight:bold;}
+
+#buldang
+	{margin:15px 77.5px;}
+
+#daejeon
+	{width:720px; height:280px; margin:15px 57.5px;}
+#dj1	{width:350px; height:262px; float:left; background-image:url("img/daejeon1.png");}
+
+#dj2	{width:350px; height:262px; float:right; background-image:url("img/daejeon2.png");}
+
+footer	p
+	{height:90px; position:relative; top:34px;
+	font-size:13px; color:#AAAAAA;}
+</style>
+</head>
+<body>
+<header><hgroup>
+	<a href="main.html"><div id="logo"><img src="img/logoTitle.png"></div></a>
+	<nav id="menu">
+		<a href="intro%231.html"><div id="menu1"><span>소개</span></div></a>
+		<a href="career%231.html"><div id="menu2"><span>진로</span></div></a>
+		<a href="gallery.html"><div id="menu1=3"><span>갤러리</span></div></a>
+	</nav>
+</hgroup></header>
+
+<main><div id="content">
+
+<div id="conDetail">
+
+<h2 id="detailTitle">갤러리</h2>
+
+<div style="height:60px"></div>
+
+<li>2022 6월 천안불당고등학교
+<div id="buldang">
+<video width="680px" height="382px" controls> 
+	<source src="coding_Buldang.mp4" type="video/mp4">
+	브라우저가 video 태그를 지원하지 않습니다.
+</video>
+</div>
+
+<div style="height:75px"></div>
+
+<li>2022 대전 교원 연수
+<div id="daejeon">
+	<div id="dj1"></div>
+	<div id="dj2"></div>
+
+</div>
+
+
+
+<div style="height:40px"></div>
+
+</div></main>
+
+<footer>
+	<p><strong>Copyright 2023, Jeong Miri All rights reserved.</strong></p>
+</footer>
+</body>
+</html>
